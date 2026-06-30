@@ -1,0 +1,23 @@
+[project]
+name = "addressr"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Michael Duffett",email = "duffett.michael@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic (>=2.13.4,<3.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "pytest (>=9.1.1,<10.0.0)",
+    "pytest-asyncio (>=1.4.0,<2.0.0)",
+    "pytest-httpx (>=0.36.2,<0.37.0)"
+]
+
+[tool.poetry]
+packages = [{include = "addressr_client"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
