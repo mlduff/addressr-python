@@ -26,4 +26,4 @@ class AddressApi():
             f"/addresses/{pid}"
         )
 
-        return AddressGetResponse.model_dump_json(response.json())
+        return AddressGetResponse.model_validate(response.json())

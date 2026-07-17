@@ -1,6 +1,6 @@
 [project]
-name = "addressr"
-version = "0.1.0"
+name = "addressr-client"
+version = "0.1.1"
 description = ""
 authors = [
     {name = "Michael Duffett",email = "duffett.michael@gmail.com"}

@@ -49,6 +49,22 @@ class Structured(BaseModel):
     postcode: Optional[str] = None
     state: Optional[State] = None
 
+
+class Geocode(BaseModel):
+    default: Optional[bool] = None
+    type: Optional[CodeName] = None
+    reliability: Optional[CodeName] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+
+
+class Geocoding(BaseModel):
+    level: Optional[CodeName] = None
+    geocodes: list[Geocode] = []
+
+
 class AddressGetResponse(BaseModel):
     sla: Optional[str] = None
     structured: Optional[Structured] = None
+    geocoding: Optional[Geocoding] = None
+    pid: Optional[str] = None
